@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+
+h1{
+	color: #2F4F4F;
+}
+
+body{
+	background-image: url('img/laptopWhite.jpg');
+	background-size: cover;
+	background-repeat: norepeat;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	/* background-image: url('img/laptopWhite.jpg');
+	background-size: cover;
+	background-repeat: norepeat;*/
+	
+}
+.loginAdmin{
+	padding: 100px;
+}
+
+.form__loginAdmin{
+	display:flex;
+	flex-direction: column;
+}
+.form__buttonsAccCan{
+	display:flex;
+	justify-content: space-around;
+}
+#usuario{
+		border-radius: 20px;
+        border-color: white;
+        width: 250px;
+        background-image:url(icons/usuario.png);
+        background-position-y:center ;
+        background-position: 10px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        padding: 10px 10px 10px 40px;
+        margin: 20px 20px;
+}
+#usuario::placeholder{
+	color: #20B2AA;
+}
+#contrasena{
+		border-radius: 20px;
+        border-color: white;
+        width: 250px;
+        background-image:url(icons/contrasena.svg);
+        background-position-y:center ;
+        background-position: 10px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        padding: 10px 10px 10px 40px;
+        margin: 20px;
+}

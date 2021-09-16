@@ -1,0 +1,105 @@
+@charset "ISO-8859-1";
+header {
+    position: relative;
+    font-size:x-large;
+    justify-content: space-around
+}
+header img{
+    margin-left: 150px;
+}
+#header__forResponsive{
+    display: none;
+}
+header label img{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+.headerMenuNOResponsive{
+    display: inline-block;
+    position: absolute;
+    width: 750px;
+    margin: 35px 30px;
+    right: 20px;
+    top: 10px;
+}
+.header__menu{
+    color: rgb(167, 169, 172);
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+.header__menu:hover{
+    background-color: #FF5773;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 5px 10px;
+    font-size: 20px;
+}
+.fa-search{
+    color: #FF5773;
+    padding: 10px;
+    
+}
+.fa-search:hover{
+    background-color: #FF5773;
+    color: #fff;
+    padding: 15px;
+}
+.header__ul__mobile{
+    display: none;
+    list-style: none;
+}
+header label{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*Versión Responsive*/
+@media only screen and (max-width: 768px){
+    header{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .headerMenuNoResponsive{
+        display: none;
+    }
+    header img{
+        margin: 0px;
+    }
+    header label{
+        display: flex;
+        justify-content: start;
+        padding: 0px 20px;
+    }
+    header label img{
+        display: block;
+    }
+    .header__ul__mobile{
+        position: absolute;
+        margin: 0px;
+        transition: all 0.5s;
+    }
+    .menu__li__mobile{
+        width: 150px;
+        padding: 2px 5px;
+        background-color: #FF5773;
+        margin: 2px;
+        border-radius: 4px;
+    }
+    .menu__li__mobile a{
+        color: #fff;
+        font-size: 15px;
+        margin: 2px;
+        padding: 4px 15px;
+    }
+    #header__forResponsive:checked ~ .header__ul__mobile{
+        display: block;
+        margin: 0px;
+        position: relative;
+    }
+}

@@ -7,24 +7,48 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet"/>
-<title>Insert title here</title>
+<title>Login page</title>
+<script
+      src="https://kit.fontawesome.com/ea8e6c92c7.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-	<img alt="imagen de fondo" src="css/img/colorful-neon-light.jpg">
 	<main>
-	<!-- <img alt="" src="img/"> -->
-	<form class="loginAdmin" method="get" action="./tiendaServlet">
-		<h1>Bienvenidos a la Tienda Generica</h1>
-		<div class="form__loginAdmin">
-		<input id="usuario" type="text" name = "usuario" placeholder="Usuario">
-		<input id="contrasena" type="password" name = "contrasena" placeholder="Contraseña">
+      <div class="div_imgStore">
+		<div class="yourWelcome">
+        <span>Bienvenidos a Isis</span>
 		</div>
-		<div class="form__buttonsAccCan">
-		<input type="submit" name="Aceptar" value="Aceptar">
-		<input type="button" name="Cancelar" value="Cancelar" onClick="location.href='../usuario.jsp'">
-		</div>
-	</form>
-	</main>
+        <img class="div_imgStore_img" src="css/img/bigIcon_tienda.png" alt="icon" />
+      </div>
+      <hr />
+      <div class="icon__div2__main">
+        <i class="far fa-user"></i>
+      </div>
+
+      <form class="loginAdmin__form" method="get" action="./tiendaServlet2">
+        <input id="usuario" type="text" name="usuario" placeholder="Usuario" />
+        <input
+          id="contrasena"
+          type="password"
+          name="contrasena"
+          placeholder="Contrasena"
+        />
+
+        <button id="login" type="submit" name="Aceptar">Login</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>* 2021 * Alexa FoMo All Right Reserved</p>
+      <div class="footer__itemFlex">
+        <a href="salidas.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="salidas.html"><i class="fab fa-twitter"></i></a>
+        <a href="salidas.html"><i class="fas fa-globe"></i></a>
+        <a href="salidas.html"><i class="fab fa-google-plus-g"></i></a>
+        <a href="salidas.html"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
 	
 <%
 ConexionBD co=new ConexionBD();

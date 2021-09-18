@@ -6,6 +6,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+
+import modelo.tableCustomerDAO;
+import modelo.tableCustomerDto;
+import modelo.tableUsuarioDAO;
+import modelo.tableUsuarioDto;
 
 /**
  * Servlet implementation class servletCustomer
@@ -36,6 +42,31 @@ public class servletCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		boolean x;
+		long cedula_cliente;
+		String direccion_cliente;
+		String email_cliente;
+		String nombre_cliente;
+		String telefono_cliente;
+		tableCustomerDto Customerdto;
+		tableCustomerDAO Customerdao;
+		if(request.getParameter("buttonInsert")!= null) {
+			
+			cedula_cliente= Long.parseLong(request.getParameter("cedulaCustomer"));
+			direccion_cliente= request.getParameter("directionCustomer");
+			email_cliente= request.getParameter("email_customer");
+			nombre_cliente= request.getParameter("nameCustomer");
+			telefono_cliente=request.getParameter("phoneNumberCustomer");
+			
+			Customerdto=new tableCustomerDto(cedula_cliente, nameUser, email_usuario, password, usuario);
+			Customerdao=new tableCustomerDAO();
+			x=userdao.insertarUsuario(userdto);
+			if(x== true) {
+				JOptionPane.showMessageDialog(null, "Usuario creado exitosamente");
+				response.sendRedirect("usuario.jsp");
+			}
+		}
 	}
 
 }

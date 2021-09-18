@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form action="servletInsertUser" method="POST">
+<form action="servletCustomer" method="POST">
 		<input type="text" name="cedulaCustomer" placeholder="Cedula de Cliente">
 		<input type="text" name="directionCustomer" placeholder="Direccion Cliente">
 		<input type="email" name="email_customer" placeholder="E-mail Cliente">

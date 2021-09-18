@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<form action="servletInsertUser" method="POST">
+	<form action="servletSupplier" method="POST">
 		<input type="text" name="nitSupplier" placeholder="NIT proveedor">
 		<input type="text" name="citySupplier" placeholder="Ciudad proveedor">
 		<input type="text" name="directionSupplier" placeholder="Direccion proveedor">

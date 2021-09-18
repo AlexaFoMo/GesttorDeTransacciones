@@ -1,49 +1,52 @@
 package modelo;
 
 public class tableSupplierDTO {
-	private long nitproveedor;
-	private String ciudad_proveedor;
-	private String direccion_proveedor;
-	private String nombre_proveedor;
-	private String telefono_proveedor;
-	public tableSupplierDTO(long nitproveedor, String ciudad_proveedor, String direccion_proveedor,
-			String nombre_proveedor, String telefono_proveedor) {
-		super();
-		this.nitproveedor = nitproveedor;
-		this.ciudad_proveedor = ciudad_proveedor;
-		this.direccion_proveedor = direccion_proveedor;
-		this.nombre_proveedor = nombre_proveedor;
-		this.telefono_proveedor = telefono_proveedor;
+	private long nitSupplier;
+	private String ciudad_Supplier;
+	private String direccion_Supplier;
+	private String nombre_Supplier;
+	private String telefono_Supplier;
+	
+	
+	public tableSupplierDTO(long nitSupplier, String ciudad_Supplier, String direccion_Supplier, String nombre_Supplier,
+			String telefono_Supplier) {
+		this.nitSupplier = nitSupplier;
+		this.ciudad_Supplier = ciudad_Supplier;
+		this.direccion_Supplier = direccion_Supplier;
+		this.nombre_Supplier = nombre_Supplier;
+		this.telefono_Supplier = telefono_Supplier;
 	}
-	public long getNitproveedor() {
-		return nitproveedor;
+	
+	
+	public long getNitSupplier() {
+		return nitSupplier;
 	}
-	public void setNitproveedor(long nitproveedor) {
-		this.nitproveedor = nitproveedor;
+	public void setNitSupplier(long nitSupplier) {
+		this.nitSupplier = nitSupplier;
 	}
-	public String getCiudad_proveedor() {
-		return ciudad_proveedor;
+	public String getCiudad_Supplier() {
+		return ciudad_Supplier;
 	}
-	public void setCiudad_proveedor(String ciudad_proveedor) {
-		this.ciudad_proveedor = ciudad_proveedor;
+	public void setCiudad_Supplier(String ciudad_Supplier) {
+		this.ciudad_Supplier = ciudad_Supplier;
 	}
-	public String getDireccion_proveedor() {
-		return direccion_proveedor;
+	public String getDireccion_Supplier() {
+		return direccion_Supplier;
 	}
-	public void setDireccion_proveedor(String direccion_proveedor) {
-		this.direccion_proveedor = direccion_proveedor;
+	public void setDireccion_Supplier(String direccion_Supplier) {
+		this.direccion_Supplier = direccion_Supplier;
 	}
-	public String getNombre_proveedor() {
-		return nombre_proveedor;
+	public String getNombre_Supplier() {
+		return nombre_Supplier;
 	}
-	public void setNombre_proveedor(String nombre_proveedor) {
-		this.nombre_proveedor = nombre_proveedor;
+	public void setNombre_Supplier(String nombre_Supplier) {
+		this.nombre_Supplier = nombre_Supplier;
 	}
-	public String getTelefono_proveedor() {
-		return telefono_proveedor;
+	public String getTelefono_Supplier() {
+		return telefono_Supplier;
 	}
-	public void setTelefono_proveedor(String telefono_proveedor) {
-		this.telefono_proveedor = telefono_proveedor;
+	public void setTelefono_Supplier(String telefono_Supplier) {
+		this.telefono_Supplier = telefono_Supplier;
 	}
 	
 	

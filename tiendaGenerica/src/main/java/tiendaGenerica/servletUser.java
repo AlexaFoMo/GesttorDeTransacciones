@@ -12,9 +12,9 @@ import modelo.tableUsuarioDAO;
 import modelo.tableUsuarioDto;
 
 /**
- * Servlet implementation class servletInsertUser
+ * Servlet implementation class servlettUser
  */
-@WebServlet("/servletInsertUser")
+@WebServlet("/servletUser")
 public class servletUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

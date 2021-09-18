@@ -10,8 +10,6 @@ import javax.swing.JOptionPane;
 
 import modelo.tableCustomerDAO;
 import modelo.tableCustomerDto;
-import modelo.tableUsuarioDAO;
-import modelo.tableUsuarioDto;
 
 /**
  * Servlet implementation class servletCustomer
@@ -59,12 +57,12 @@ public class servletCustomer extends HttpServlet {
 			nombre_cliente= request.getParameter("nameCustomer");
 			telefono_cliente=request.getParameter("phoneNumberCustomer");
 			
-			Customerdto=new tableCustomerDto(cedula_cliente, nameUser, email_usuario, password, usuario);
+			Customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
 			Customerdao=new tableCustomerDAO();
-			x=userdao.insertarUsuario(userdto);
+			x=Customerdao.insertCustomer(Customerdto);
 			if(x== true) {
-				JOptionPane.showMessageDialog(null, "Usuario creado exitosamente");
-				response.sendRedirect("usuario.jsp");
+				JOptionPane.showMessageDialog(null, "Cliente creado exitosamente");
+				response.sendRedirect("menuPrincipal.jsp");
 			}
 		}
 	}

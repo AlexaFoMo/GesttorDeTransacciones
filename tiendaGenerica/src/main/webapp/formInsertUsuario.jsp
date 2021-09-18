@@ -12,7 +12,7 @@
 
 
 
-	<form action="servletInsertUser" method="POST">
+	<form action="servletUser" method="POST">
 		<input type="text" name="cedulaUser" placeholder="Cedula de Usuario">
 		<input type="text" name="nameUser" placeholder="Nombre de Usuario">
 		<input type="email" name="email_usuario" placeholder="E-mail Usuario">

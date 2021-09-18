@@ -21,7 +21,7 @@ public class tableUsuarioDAO {
 			ps.setString(2, Us.getEmail_usuario());
 			ps.setString(3, Us.getNombre_usuario());
 			ps.setString(4, Us.getPassword());
-			ps.setString(5, Us.getUsuario());
+			ps.setString(5, Us.getUsuario() );
 			r=ps.executeUpdate();
 			if(r>0) {
 				dat=true;

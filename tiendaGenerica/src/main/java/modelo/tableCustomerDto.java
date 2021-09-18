@@ -1,13 +1,13 @@
 package modelo;
 
-public class tableClienteDto {
+public class tableCustomerDto {
 	private long cedula_cliente;
 	private String direccion_cliente;
 	private String email_cliente;
 	private String nombre_cliente;
 	private String telefono_cliente;
 	
-	public tableClienteDto(long cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
+	public tableCustomerDto(long cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
 			String telefono_cliente) {
 		this.cedula_cliente = cedula_cliente;
 		this.direccion_cliente = direccion_cliente;

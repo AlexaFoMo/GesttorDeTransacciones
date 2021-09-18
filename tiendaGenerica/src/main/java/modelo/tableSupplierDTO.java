@@ -1,12 +1,12 @@
 package modelo;
 
-public class tableProveedoresDTO {
+public class tableSupplierDTO {
 	private long nitproveedor;
 	private String ciudad_proveedor;
 	private String direccion_proveedor;
 	private String nombre_proveedor;
 	private String telefono_proveedor;
-	public tableProveedoresDTO(long nitproveedor, String ciudad_proveedor, String direccion_proveedor,
+	public tableSupplierDTO(long nitproveedor, String ciudad_proveedor, String direccion_proveedor,
 			String nombre_proveedor, String telefono_proveedor) {
 		super();
 		this.nitproveedor = nitproveedor;

@@ -1,5 +1,5 @@
 package modelo;
 
-public class tableProveedoresDAO {
+public class tableSupplierDAO {
 
 }

@@ -19,7 +19,7 @@
 		<div class="yourWelcome">
         <span>Bienvenidos a Isis</span>
 		</div>
-        <img class="div_imgStore_img" src="css/img/bigIcon_tienda.png" alt="icon" />
+        <img class="div_imgStore_img" src="css/img/bigIcon_tienda.png" alt="icon"  />
       </div>
       <hr />
       <div class="icon__div2__main">

@@ -13,11 +13,11 @@
 
 
 	<form action="servletInsertUser" method="POST">
-		<input type="text" name="cedulaUser" placeholder="Cédula de Usuario">
+		<input type="text" name="cedulaUser" placeholder="Cedula de Usuario">
 		<input type="text" name="nameUser" placeholder="Nombre de Usuario">
-		<input type="email" name="email_usuario" placeholder="Nombre de Usuario">
-		<input type="password" name="passwordUser" placeholder="Nombre de Usuario">
-		<input type="text" name="usuario" placeholder="Nombre de Usuario">
+		<input type="email" name="email_usuario" placeholder="E-mail Usuario">
+		<input type="password" name="passwordUser" placeholder="Contrasena">
+		<input type="text" name="user" placeholder="Usuario">
 		<input type="submit" name="buttonInsert">
 	
 	</form>

@@ -3,7 +3,8 @@ package modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import tiendaGenerica.ConexionBD;
+
+import Controlador.ConexionBD;
 
 public class tableCustomerDAO {
 	ConexionBD con = new ConexionBD();

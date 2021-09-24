@@ -1,4 +1,4 @@
-package tiendaGenerica;
+package Controlador;
 
 import java.sql.*;
 
@@ -12,8 +12,9 @@ public class ConexionBD {
 		
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			cnn=DriverManager.getConnection("jdbc:mysql://localhost/tiendagenerica","root","root");
-			JOptionPane.showMessageDialog(null, "Conexion ok");
+			//JOptionPane.showMessageDialog(null, "Conexion ok");
 		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Conexion failure");
 			e.printStackTrace();
 
 	} catch (ClassNotFoundException e) {

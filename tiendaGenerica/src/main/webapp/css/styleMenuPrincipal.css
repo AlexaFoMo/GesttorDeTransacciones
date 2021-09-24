@@ -1,0 +1,87 @@
+@charset "ISO-8859-1";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Carattere", cursive;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+body {
+  background: fixed center/100% url(img/formularios.jpg);
+  object-fit: cover;
+  height: max-content;
+}
+.body__titlePage {
+  position: relative;
+  margin: 20px 10px;
+  background-color: #36fcfc25;
+  font-size: 52px;
+  color: #f7d000;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+	position:relative;
+  width: 100%;
+  font-size: x-large;
+  border: 3px solid #f7d000;
+  margin: 10px auto;
+  padding-bottom: 25px;
+}
+
+.header__logoMarca {
+    position: absolute;
+  height: 90%;
+  object-fit: scale-down;
+  border-radius: 50%;
+  margin: 7px 20px;
+}
+.headerMenuNOResponsive {
+	display: flex;
+	justify-content: space-evenly;
+    margin: 0px auto;
+  width: 80%;
+}
+.header__menu {
+  border: solid 3px #f7d000;
+  border-radius: 15%;
+  color: #f7d000;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  background-color: #36fcfc25;
+}
+.header__menu:hover {
+  background-color: #ffd70055;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 5px 10px;
+  font-size: 20px;
+}
+.fa-search {
+  color: #f7d000;
+  padding: 10px;
+}
+.fa-search:hover {
+  background-color: #ffd70055;
+  color: #fff;
+  padding: 15px;
+}
+.header__ul__mobile {
+  display: none;
+  list-style: none;
+}
+header label {
+  padding: 0px;
+  margin: 0px;
+}
+#header__forResponsive {
+  display: none;
+}

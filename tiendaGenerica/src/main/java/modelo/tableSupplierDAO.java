@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import tiendaGenerica.ConexionBD;
+import Controlador.ConexionBD;
 
 public class tableSupplierDAO {
 	

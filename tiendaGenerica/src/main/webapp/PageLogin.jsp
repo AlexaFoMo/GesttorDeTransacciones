@@ -30,6 +30,16 @@
 
 <!-- Inicio page Login -->
 <body>
+
+	<!-- Prsentación de la marca -->
+	<div class="body__div__tarjetaDePagina">
+		<div class="body__div__imagenDePresentacion">
+			<img class="mainContenedor__logoMarca" src="css/img/presentacion de la pagina.jpg"  alt="icon" />
+		</div>
+	
+	</div>
+
+
 	<!-- Contenedor de todo el Login -->
 	<main class="mainContenedor">
 		<div class="mainContenedor__tituloMain">
@@ -40,11 +50,13 @@
 			alt="icon" />
 
 		<!-- Formulario contenedor de los "botones" -->
-		<form class="mainContenedor____formularioLogin" method="post" action="servletPageLogin">
-		
+		<form class="mainContenedor____formularioLogin" method="post"
+			action="servletPageLogin">
+
 			<!-- Los 3 "botones" del login, 2 de escribir y 1 botón de Login -->
 			<input id="usuario" type="text" name="usuario" placeholder="Usuario" />
-			<input id="contrasena" type="password" name="contrasena" placeholder="Contrasena" />
+			<input id="contrasena" type="password" name="contrasena"
+				placeholder="Contrasena" />
 
 			<button id="login" type="submit" name="Aceptar">Login</button>
 		</form>

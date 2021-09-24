@@ -40,7 +40,7 @@
         <input type="checkbox" id="header__forResponsive">
         <label for="header__forResponsive"><img src="img/menu.png" alt=""></label>
         <div class="headerMenuNOResponsive">
-          <a class="header__menu headerMenuNoResponsive" href="formInsertUsuario.jsp" >Usuarios</a>
+          <a class="header__menu headerMenuNoResponsive" href="formUsuario.jsp" >Usuarios</a>
           <a class="header__menu headerMenuNoResponsive" href="formInsertCustomer.jsp" target="blank">Clientes</a>
           <a class="header__menu headerMenuNoResponsive" href="formInsertSupplier.jsp" target="blank">Proveedores</a>
           <a class="header__menu headerMenuNoResponsive" href="products.jsp" target="blank">Productos</a>

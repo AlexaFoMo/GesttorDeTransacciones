@@ -4,187 +4,190 @@
 
 /*Estilos para toda la página*/
 * {
-  padding: 0;
-  margin: 0;
-  font-family: 'Carattere', cursive;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Carattere', cursive;
+	box-sizing: border-box;
 }
-img{
-  max-width: 100%;
+
+img {
+	max-width: 100%;
 }
 
 /*Estilos para el body*/
 body {
-  /* Se dejan 2 opciones de imágenes de fondo, con esta imagen descomentar el color de mainContenedor.*/
-  background: no-repeat center/100%  url(img/fotografiaFondo.jpg); 
-  /* background: no-repeat center/100% url(img/fondoluxury.jpg); */
-
-  /* background-color: black; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	/* Se dejan 2 opciones de imágenes de fondo, con esta imagen descomentar el color de mainContenedor.*/
+	background: no-repeat center/100% url(img/fotografiaFondo.jpg);
+	/* background: no-repeat center/100% url(img/fondoluxury.jpg); */
+	/* background-color: black; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-body img{
-  position: relative;
+
+body img {
+	position: relative;
 }
 
 /*Estilos para el main contenedor*/
 .mainContenedor {
-  /*Descomentame con la imagendel castillo dorado.*/
-   background-color: rgba(244, 250, 250, 0.2); 
-  /* background-color: rgba(21, 34, 75, 0.8); */
-  margin: 30px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  border-radius: 3%;
-  width: calc(100vw * (350 / 1366));
-  height: calc(100vw * (550 / 1366));
+	/*Descomentame con la imagen del castillo dorado.*/
+	background-color: rgba(244, 250, 250, 0.2);
+	/* background-color: rgba(21, 34, 75, 0.8); */
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid white;
+	border-radius: 3%;
+	width: calc(100vw * ( 350/ 1366));
+	height: calc(100vw * ( 550/ 1366));
 }
 /*Estilos para el título "Bienvenidos a Isis"*/
-span{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Carattere', cursive;
-    font-size: 45px;
-  }
+span {
+	margin: 0;
+	padding: 0;
+	color: #f7d000;
+	font-family: 'Carattere', cursive;
+	font-size: 52px;
+}
 /*Estilos para la imagen del Logo de la marca*/
 .mainContenedor__logoMarca {
-  box-sizing: border-box;
-  width: calc(90% - 10px);
-  height: calc(50% - 10px);
-  object-fit: cover;
-  /* outline: 3px solid #FFD70055; */
-  border-radius: 50%;
+	box-sizing: border-box;
+	width: calc(90% - 10px);
+	height: calc(50% - 10px);
+	object-fit: cover;
+	/* outline: 3px solid #FFD70055; */
+	border-radius: 50%;
 }
 /*Estilos para el formulario contenedor de los 3 "botones"*/
 .mainContenedor____formularioLogin {
-  height: calc(50% - 10px);
-  border-top: 3px solid white;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	height: calc(50% - 10px);
+	border-top: 3px solid white;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 /*Estilos de los "botones"*/
-form input{
-  outline: none;
+form input {
+	outline: none;
 }
-form button{
-  outline: none;
+
+form button {
+	outline: none;
 }
 /*Estilos del input USUARIO*/
 #usuario {
-  border-radius: 20px;
-  border-color: #36fcfc25;
-  width: 70%;
-  margin-bottom: 10px;
-  background-color: #36fcfc25;
-  padding: 5px;
+	border-radius: 20px;
+	border-color: #36fcfc25;
+	width: 70%;
+	margin-bottom: 10px;
+	background-color: #36fcfc25;
+	padding: 5px;
 }
+
 #usuario::placeholder {
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
+	text-align: center;
+	font-size: 20px;
+	color: #f7d000;
 }
+
 #usuario:hover {
-  color: #20b2aa;
+	color: #20b2aa;
 }
 /*Estilos del input CONTRASEÑA*/
 #contrasena {
-  border-radius: 20px;
-  border-color: #36fcfc25;
-  width: 70%;
-  margin-bottom: 20px;
-  background-color: #36fcfc25;
-  padding: 5px;
+	border-radius: 20px;
+	border-color: #36fcfc25;
+	width: 70%;
+	margin-bottom: 20px;
+	background-color: #36fcfc25;
+	padding: 5px;
 }
+
 #contrasena::placeholder {
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
+	text-align: center;
+	font-size: 20px;
+	color: #f7d000;
 }
+
 #contrasena:hover {
-  color: #20b2aa;
+	color: #20b2aa;
 }
 /*Estilos del input LOGIN*/
 #login {
-  border-radius: 20px;
-  border-color: #FFD70055;
-  width: 70%;
-  background-color: #FFD70055;
-  color: #fff;
-  font-size: 20px;
-  padding: 2px;
+	border-radius: 20px;
+	border-color: #FFD70055;
+	width: 70%;
+	background-color: #FFD70055;
+	color: #f7d000;
+	font-size: 20px;
+	padding: 2px;
 }
 /*Estilos del pie de página*/
-footer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    backdrop-filter: blur(12px);
+footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	backdrop-filter: blur(12px);
 }
 /*Estilos del pie de página versión mobile*/
-.footer_responsive{
-  display: none;
+.footer_responsive {
+	display: none;
 }
 /*Estilos de las imágenes del pie de página*/
-footer i{
-    margin: 10px 10px;
+footer i {
+	margin: 10px 10px;
 }
 /*Estilos del texto del pie de página*/
-footer p{
-    word-spacing: 10px;
-    margin-bottom: 20px;
-}
-footer p, i{
-  backdrop-filter: blur(12px);
-    color: #fff;
-    font-size: 30px;
+footer p {
+	word-spacing: 10px;
+	margin-bottom: 20px;
 }
 
-
-
+footer p, i {
+	backdrop-filter: blur(12px);
+	color: #fff;
+	font-size: 30px;
+}
 
 /*Versión Responsive*/
-@media only screen and (max-width: 768px){
-  body{
-    background-image: url(img/formularios.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .mainContenedor{
-    width: 90%;
-    height: 90%;
-    margin-bottom: 0px;
-    border: 3px solid #FFD70055;
-  }
-  #usuario{
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  #contrasena{
-    margin:5px;
-  }
-  #login{
-    margin-bottom: 8px;
-    background-color: #FFD70055;
-  }
-  footer{
-    margin: 5px;
-  }
-  footer p, i{
-    backdrop-filter: blur(12px);
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
+@media only screen and (max-width: 768px) {
+	body {
+		background-image: url(img/formularios.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.mainContenedor {
+		width: 90%;
+		height: 90%;
+		margin-bottom: 0px;
+		border: 3px solid #FFD70055;
+	}
+	#usuario {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	#contrasena {
+		margin: 5px;
+	}
+	#login {
+		margin-bottom: 8px;
+		background-color: #FFD70055;
+	}
+	footer {
+		margin: 5px;
+	}
+	footer p, i {
+		backdrop-filter: blur(12px);
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
 }

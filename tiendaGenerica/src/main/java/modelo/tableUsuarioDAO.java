@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -12,8 +13,12 @@ import Controlador.ConexionBD;
 public class tableUsuarioDAO {
 	ConexionBD con = new ConexionBD();
 	Connection cnn = con.conexionbd();
+	
+	
 	PreparedStatement ps;
-
+	ResultSet rs;
+	tableUsuarioDto dat = null;
+	
 	// INSERTAR
 	public boolean insertarUsuario(tableUsuarioDto Us) {
 		int r;
@@ -22,10 +27,11 @@ public class tableUsuarioDAO {
 		try {
 			ps = cnn.prepareStatement("INSERT INTO usuario values(?,?,?,?,?)");
 			ps.setLong(1, Us.getCedula_usuario());
-			ps.setString(2, Us.getEmail_usuario());
-			ps.setString(3, Us.getNombre_usuario());
-			ps.setString(4, Us.getPassword());
-			ps.setString(5, Us.getUsuario());
+			ps.setString(2, Us.getNombre_usuario());
+			ps.setString(3, Us.getEmail_usuario());
+			ps.setString(4, Us.getUsuario());
+			ps.setString(5, Us.getPassword());
+			
 			r = ps.executeUpdate();
 			if (r > 0) {
 				dat = true;
@@ -90,5 +96,29 @@ public class tableUsuarioDAO {
 			e.printStackTrace();
 		}
 		return x;
+	}
+	
+	
+	
+	//Consulta "masiva"
+	public ArrayList<tableUsuarioDto> consultaMasiva(){
+		ArrayList<tableUsuarioDto>consultaUsuarios=new ArrayList<tableUsuarioDto>();
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM usuarios");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				dat=new tableUsuarioDto(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				consultaUsuarios.add(dat);
+			}
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return consultaUsuarios;
+		
+		
+		
+		
 	}
 }

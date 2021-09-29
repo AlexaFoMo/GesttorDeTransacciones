@@ -1,0 +1,210 @@
+@charset "ISO-8859-1";
+/*Estilos para toda la página*/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Carattere", cursive;
+	
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+input{
+	font-family: 'Gemunu Libre', sans-serif;
+}
+/*Estilos del body*/
+body {
+	background: fixed center/100% url(img/joyas.jpeg);
+	object-fit: cover;
+	height: max-content;
+}
+/*Estilos de los títulos joyería y módulo*/
+.body__titlePage {
+    box-shadow: 0 0.4rem 0.8rem #958784;
+    margin: 10px auto;
+    background-color: #c8beb200;
+    border: 2px outset #e3ded1;
+    border-radius: 20px;
+    font-size: 120px;
+    color: #341e20;
+    font-family: "Carattere", cursive;
+    text-align: center;
+    width: 50%;
+    height: 40%;
+    text-shadow: 3px 3px 5px #e3ded1;
+}
+.body__subtitlePage{
+	box-shadow: 0 0.4rem 0.8rem #958784;
+	margin: 10px auto;
+    background-color: #c8beb200;
+    border: 2px outset #e3ded1;
+    border-radius: 20px;
+    font-size: 50px;
+    color: #341e20;
+    font-family: "Carattere", cursive;
+    text-align: center;
+    width: 50%;
+    height: 40%;
+    text-shadow: 3px 3px 5px #e3ded1;
+}
+header {
+position: relative;
+    background: linear-gradient(to top,#bfaea0, #dfd8d2);
+    width: 100%;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #b5a090;
+}
+
+.headerMenuNOResponsive {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.header__menu {
+	font-size: 40px;
+	border: none;
+	color: #442e1f;
+	text-decoration: none;
+}
+
+.header__menu:hover {
+	color: #fff;
+	background: linear-gradient(to top,#bfaea0, #dfd8d2);
+}
+.header__ul__mobile {
+  display: none;
+  list-style: none;
+}
+header label {
+  padding: 0px;
+  margin: 0px;
+}
+#header__forResponsive {
+  display: none;
+}
+
+
+
+/*Estilos del CONTENDOR del FORMULARIO*/
+.contenedor__formularioCompleto{
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	backdrop-filter: blur(10px);
+	
+	background-color:transparent;
+	margin:10px auto;
+	padding:30px;
+	box-shadow: 0 0.4rem 0.8rem #958784;
+	border-radius: 20px;
+	
+	min-width:700px;
+	min-height:800px;
+	width: 50%;
+	height:90%;
+}
+
+
+.tituloDelFormulario{
+	width: 80%;
+	border-bottom: 2px solid #442e1f;
+	display: flex;
+	flex-direction:column;
+	margin:auto;
+	text-align:center;
+}
+
+.tituloDelFormulario i{
+	color:#442e1f;;
+	font-size:100px;
+}
+.tituloDelFormulario span{
+	font-size:50px;
+	color: #442e1f;
+	margin:10px 0;
+	
+}
+
+/*Estilos del FORMULARIO*/
+.formularioUsuario {
+	display:flex;
+	flex-wrap:wrap;
+	margin:20px auto;
+	min-width:400px;
+	background-color:transparent;
+	padding:20px;
+	border: 3px solid#442e1f;
+	border-radius: 20px;
+	width: 80%;
+	height:90%;
+}
+
+
+
+/*Estilos de los INPUT del FORMULARIO*/
+.form__input {
+	min-width: 80px;
+	flex-grow:1;
+	width:100%;
+	border:none;
+	border-bottom: solid 3px #442e1f;
+	border-radius: 20px;
+	font-size: 28px;
+	padding: 10px;
+	margin: 5px;
+	background-color:transparent;
+}
+.form__input:focus {
+	outline:none;
+	color:#fff;
+	font-family:'Gemunu Libre', sans-serif;
+	background: linear-gradient(to bottom, transparent, #442e1f);
+	border-bottom: 5px solid #442e1f;
+}
+/*Estilos del mensaje visible de los INPUT del FORMULARIO*/
+.form__input::placeholder {
+	color:#fff;
+	font-size: 28px;
+}
+
+.form__contenedorBotones{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-evenly;
+	align-items:flex-end;
+	flex-grow:1;
+	border-top: 2px solid #442e1f;
+}
+
+.form__Botones {
+	text-align: center;
+	min-width: 80px;
+	flex-grow: 1;
+	width: 10%;
+	outline:none;
+	background: linear-gradient(to top,#bfaea0, #dfd8d2);
+	font-size: 40px;
+	border: 2px outset #e3ded1;
+	border-radius:20px;
+	color: #fff;
+	margin-top:10px;
+}
+/*Estilos del botón CANCELAR del FORMULARIO*/
+.form__BotonCancelar {
+	text-align: center;
+	font-family:'Gemunu Libre', sans-serif;
+	min-width: 80px;
+	flex-grow: 1;
+	width: 10%;
+	outline:none;
+	background: linear-gradient(to top,#bfaea0, #dfd8d2);
+	font-size: 40px;
+	border: 2px outset #e3ded1;
+	border-radius:20px;
+	color: #fff;
+	margin-top:10px;
+	text-decoration: none;
+}
+

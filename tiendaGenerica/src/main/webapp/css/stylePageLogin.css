@@ -16,59 +16,48 @@ img {
 
 /*Estilos para el body*/
 body {
-	/* Se dejan 2 opciones de imágenes de fondo, con esta imagen descomentar el color de mainContenedor.*/
-	background: no-repeat center/100% url(img/fotografiaFondo.jpg);
-	/* background: no-repeat center/100% url(img/fondoluxury.jpg); */
-	/* background-color: black; */
+	background: no-repeat center/100% url(img/mujer.jpg);
+	background-color: #5d544d;
+	background-size:cover;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
 }
-
-body img {
-	position: relative;
+/*Estilos para el título "Joyería Isis"*/
+.Contenedor__tituloJoyeria{
+	max-width:32rem;
+	margin: 2rem;
+	padding:0.5rem 2rem;
+    background: linear-gradient(to left, transparent, #514545);
+    border-radius: 20px;
 }
-
+.tituloJoyeria {
+	display:inline-block;
+    font-size: 120px;
+    color: #341e20;
+    font-family: "Carattere", cursive;
+    text-shadow: 3px 3px 5px #e3ded1;
+}
 /*Estilos para el main contenedor*/
 .mainContenedor {
-	/*Descomentame con la imagen del castillo dorado.*/
-	background-color: rgba(244, 250, 250, 0.2);
-	/* background-color: rgba(21, 34, 75, 0.8); */
-	margin: 30px;
+	background-image:url(img/tonosclaros.jpg);
+	background-size:100%;
+	background-repeat:no-repeat;
+	/*background:linear-gradient(to bottom, transparent, #423a38); */
+	margin: 0px 8rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid white;
 	border-radius: 3%;
 	width: calc(100vw * ( 350/ 1366));
 	height: calc(100vw * ( 550/ 1366));
 }
-/*Estilos para el título "Bienvenidos a Isis"*/
-span {
-	margin: 0;
-	padding: 0;
-	color: #f7d000;
-	font-family: 'Carattere', cursive;
-	font-size: 52px;
-}
-/*Estilos para la imagen del Logo de la marca*/
-.mainContenedor__logoMarca {
-	box-sizing: border-box;
-	width: calc(90% - 10px);
-	height: calc(50% - 10px);
-	object-fit: cover;
-	/* outline: 3px solid #FFD70055; */
-	border-radius: 50%;
-}
 /*Estilos para el formulario contenedor de los 3 "botones"*/
 .mainContenedor____formularioLogin {
 	height: calc(50% - 10px);
-	border-top: 3px solid white;
+	width:80%;
 	margin-top: 10px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
@@ -80,53 +69,71 @@ form input {
 form button {
 	outline: none;
 }
+
+
+
 /*Estilos del input USUARIO*/
 #usuario {
+	min-width: 80%;
+	
+	width:100%;
+	border:none;
+	border-bottom: solid 5px #b4796c;
 	border-radius: 20px;
-	border-color: #36fcfc25;
-	width: 70%;
-	margin-bottom: 10px;
-	background-color: #36fcfc25;
-	padding: 5px;
+	background-color:transparent;
+	margin:2rem;
 }
 
 #usuario::placeholder {
-	text-align: center;
-	font-size: 20px;
-	color: #f7d000;
+	font-size: 48px;
+	color: #341e20;
 }
 
 #usuario:hover {
-	color: #20b2aa;
+	outline:none;
+	font-size: 48px;
+	font-family: 'Carattere', cursive;
+	background: linear-gradient(to bottom, transparent, #fceeba);
+	border-bottom: 5px solid #fceeba;
 }
 /*Estilos del input CONTRASEÑA*/
 #contrasena {
+	min-width: 80%;
+	
+	width:100%;
+	border:none;
+	border-bottom: solid 5px #b4796c;
 	border-radius: 20px;
-	border-color: #36fcfc25;
-	width: 70%;
-	margin-bottom: 20px;
-	background-color: #36fcfc25;
-	padding: 5px;
+	background-color:transparent;
+	margin:2rem;
 }
 
 #contrasena::placeholder {
-	text-align: center;
-	font-size: 20px;
-	color: #f7d000;
+	font-size: 48px;
+	color: #341e20;
 }
 
 #contrasena:hover {
-	color: #20b2aa;
+	outline:none;
+	font-size: 48px;
+	font-family: 'Carattere', cursive;
+	background: linear-gradient(to bottom, transparent, #fceeba);
+	border-bottom: 5px solid #fceeba;
 }
 /*Estilos del input LOGIN*/
 #login {
+	align-self: flex-end;
+	font-family: 'Gemunu Libre', sans-serif;
+	font-size:40px;
+	text-align:center;
+	margin: auto;
+	width: 100%;
+	border: solid 3px #b4796c;
 	border-radius: 20px;
-	border-color: #FFD70055;
-	width: 70%;
-	background-color: #FFD70055;
-	color: #f7d000;
-	font-size: 20px;
-	padding: 2px;
+	color: #fff;
+	background: linear-gradient(to bottom, transparent, #b4796c);
+	margin: 5px;
+	text-decoration: none;
 }
 /*Estilos del pie de página*/
 footer {

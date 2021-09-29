@@ -28,26 +28,18 @@
 	crossorigin="anonymous"></script>
 </head>
 
+
+
 <!-- Inicio page Login -->
 <body>
 
-	<!-- Prsentación de la marca -->
-	<div class="body__div__tarjetaDePagina">
-		<div class="body__div__imagenDePresentacion">
-			<img class="mainContenedor__logoMarca" src="css/img/presentacion de la pagina.jpg"  alt="icon" />
+	<div class="Contenedor__tituloJoyeria">
+			<p class="tituloJoyeria">Joyeria Isis</p>
 		</div>
-	
-	</div>
 
 
 	<!-- Contenedor de todo el Login -->
 	<main class="mainContenedor">
-		<div class="mainContenedor__tituloMain">
-			<span>Joyeria Isis</span>
-		</div>
-
-		<img class="mainContenedor__logoMarca" src="css/img/logo__.jpg"
-			alt="icon" />
 
 		<!-- Formulario contenedor de los "botones" -->
 		<form class="mainContenedor____formularioLogin" method="post"

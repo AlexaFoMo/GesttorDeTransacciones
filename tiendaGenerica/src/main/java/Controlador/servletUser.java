@@ -69,7 +69,10 @@ public class servletUser extends HttpServlet {
 			usuarioInsertado=userdao.insertarUsuario(userdto);
 			if(usuarioInsertado== true) {
 				JOptionPane.showMessageDialog(null, "Usuario creado exitosamente");
-				response.sendRedirect("usuario.jsp");
+				response.sendRedirect("formInsertUsuario.jsp");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Failure, No se creo usuario.");
 			}
 		}
 		
@@ -96,7 +99,7 @@ public class servletUser extends HttpServlet {
 				password = (registro.getPassword());
 				usuario = (registro.getUsuario());
 				
-				response.sendRedirect("usuario.jsp");
+				response.sendRedirect("formConsultarUsuario.jsp?cedula="+cedula_usuario+"&&nombre="+nameUser+"&&email="+email_usuario+"&&usuario="+usuario+"&&password="+password);
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "No se encontró usuario");
@@ -123,7 +126,7 @@ public class servletUser extends HttpServlet {
 		else {
 			JOptionPane.showMessageDialog(null, "Usuario no actualizado");
 		}
-		response.sendRedirect("usuario.jsp");
+		response.sendRedirect("formUsuario.jsp");
 }
 
 	
@@ -147,7 +150,7 @@ public class servletUser extends HttpServlet {
 			JOptionPane.showMessageDialog(null, "Usuario no eliminado");
 			
 		}
-		response.sendRedirect("usuario.jsp");
+		response.sendRedirect("formUsuario.jsp");
 		
 	}
 }

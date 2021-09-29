@@ -7,6 +7,10 @@ public class tableUsuarioDto {
 	private String password;
 	private String usuario;
 	
+	
+	public tableUsuarioDto() {
+		
+	}
 	public tableUsuarioDto(long cedula_usuario, String email_usuario, String nombre_usuario, String password,
 			String usuario) {
 		this.cedula_usuario = cedula_usuario;

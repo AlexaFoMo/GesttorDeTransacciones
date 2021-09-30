@@ -41,9 +41,10 @@
           <a class="header__menu" href="#">Usuarios</a>
           <ul>
             <li><a class="header__submenu"  href="formInsertUsuario.jsp">Registrar</a></li>
-            <li><a class="header__submenu" href="formEliminarUsuario">Eliminar</a></li>
-            <li><a class="header__submenu" href="formActualizarUsuario.jsp">Actualizar</a></li>
             <li><a class="header__submenu" href="formConsultarUsuario.jsp">Consultar</a></li>
+            <li><a class="header__submenu" href="formConsultarUsuario.jsp">Actualizar</a></li>
+            <li><a class="header__submenu" href="formConsultarUsuario.jsp">Eliminar</a></li>
+            
           </ul>
         </li>
         <li>
@@ -51,14 +52,36 @@
           <ul>
             <li><a class="header__submenu" href="formInsertCustomer.jsp">Registrar</a></li>
             <li><a class="header__submenu" href="formConsultarCustomer.jsp">Consultar</a></li>
-            <li><a class="header__submenu" href="formActualizarCustomer.jsp">Actualizar</a></li>
-            <li><a class="header__submenu" href="formEliminarCustomer">Eliminar</a></li>
+            <li><a class="header__submenu" href="formConsultarCustomer.jsp">Actualizar</a></li>
+            <li><a class="header__submenu" href="formConsultarCustomer.jsp">Eliminar</a></li>
           </ul>
         </li>
-        <li><a class="header__menu" href="#">Proveedores</a></li>
-        <li><a class="header__menu" href="#">Productos</a></li>
-        <li><a class="header__menu" href="#">Ventas</a></li>
-        <li><a class="header__menu" href="#">Reportes</a></li>
+        <li><a class="header__menu" href="#">Proveedores</a>
+        <ul>
+            <li><a class="header__submenu" href="formInsertSupplier.jsp">Registrar</a></li>
+            <li><a class="header__submenu" href="formConsultarSupplier.jsp">Consultar</a></li>
+            <li><a class="header__submenu" href="formConsultarSupplier.jsp">Actualizar</a></li>
+            <li><a class="header__submenu" href="formConsultarSupplier.jsp">Eliminar</a></li>
+          </ul>
+        </li>
+        <li><a class="header__menu" href="#">Productos</a>
+        <ul>
+            <li><a class="header__submenu" href="formCargarProducts.jsp">Cargar</a></li>
+          </ul>
+        </li>
+        <li><a class="header__menu" href="#">Ventas</a>
+        <ul>
+            <li><a class="header__submenu" href="formConsultarVentas.jsp">Consultar</a></li>
+          </ul>
+        </li>
+        <li><a class="header__menu" href="#">Reportes</a>
+        <ul>
+            <li><a class="header__submenu" href="formInsertSupplier.jsp">Usuarios</a></li>
+            <li><a class="header__submenu" href="formConsultarSupplier.jsp">Clientes</a></li>
+            <li><a class="header__submenu" href="formConsultarSupplier.jsp">Ventas por cliente</a></li>
+          </ul>
+        </li>
+        <li><a class="header__menu" href="menuPrincipal.jsp">Menú</a></li>
         <li><a class="header__menu" href="PageLogin.jsp">Salir</a></li>
       </ul>
     </nav>

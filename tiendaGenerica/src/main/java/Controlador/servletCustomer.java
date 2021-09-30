@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 
 import modelo.tableCustomerDAO;
 import modelo.tableCustomerDto;
+import modelo.tableUsuarioDAO;
+import modelo.tableUsuarioDto;
 
 /**
  * Servlet implementation class servletCustomer
@@ -49,6 +51,10 @@ public class servletCustomer extends HttpServlet {
 		String telefono_cliente;
 		tableCustomerDto Customerdto;
 		tableCustomerDAO Customerdao;
+		tableCustomerDto registro=null;
+		
+		
+		//INSERTAR
 		if(request.getParameter("buttonInsert")!= null) {
 			
 			cedula_cliente= Long.parseLong(request.getParameter("cedulaCustomer"));
@@ -65,6 +71,38 @@ public class servletCustomer extends HttpServlet {
 				response.sendRedirect("menuPrincipal.jsp");
 			}
 		}
-	}
+	
 
+	
+	
+	//CONSULTAR
+			if(request.getParameter("buttonConsult")!= null) {
+				
+				
+				cedula_cliente= Long.parseLong (request.getParameter("cedulaCustomer"));
+				direccion_cliente= request.getParameter("directionCustomer");
+				email_cliente= request.getParameter("email_customer");
+				nombre_cliente= request.getParameter("nameCustomer");
+				telefono_cliente= request.getParameter("phoneNumberCustomer");
+				
+				
+				Customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
+				Customerdao=new tableCustomerDAO();
+				registro = Customerdao.consultar(Customerdto);
+				
+				if(registro!= null) {
+					cedula_cliente = (registro.getCedula_Customer() );
+					direccion_cliente = (registro.getDireccion_Customer() );
+					email_cliente = (registro.getEmail_Customer() );
+					nombre_cliente = (registro.getNombre_Customer() );
+					telefono_cliente = (registro.getTelefono_Customer());
+					
+					response.sendRedirect("formConsultarCustomer.jsp?cedula="+cedula_cliente+"&&direccion="+direccion_cliente+"&&email="+email_cliente+"&&nombre="+nombre_cliente+"&&telefono="+telefono_cliente);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "No se encontró cliente");
+				}
+			}
+	
+}
 }

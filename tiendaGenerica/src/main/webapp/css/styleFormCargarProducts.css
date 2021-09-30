@@ -141,6 +141,7 @@ nav {
 	display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content:center;
     backdrop-filter: blur(10px);
     background-color: transparent;
     margin: 10px auto;
@@ -148,9 +149,9 @@ nav {
     box-shadow: 1rem 1rem 1rem #7b6766;
     border-radius: 20px;
     min-width: 700px;
-    min-height: 800px;
+    min-height: 600px;
     width: 50%;
-    height: 90%;
+    height: 60%;
 }
 
 .tituloDelFormulario {
@@ -158,12 +159,11 @@ nav {
     border-bottom: 2px solid #341e20;
     display: flex;
     flex-direction: column;
-    margin: auto;
     text-align: center;
 }
 
 .tituloDelFormulario i {
-	color: #dfbbb2;
+	color: #cb0c10;
     font-size: 100px;
 }
 
@@ -177,7 +177,7 @@ nav {
 .formularioUsuario {
 	display: flex;
     flex-wrap: wrap;
-    margin: 20px auto;
+    margin: 60px auto;
     min-width: 400px;
     background-color: transparent;
     padding: 20px;
@@ -187,6 +187,7 @@ nav {
     height: 90%;
 }
 /*Estilos de los INPUT del FORMULARIO*/
+
 .form__input {
 	min-width: 80px;
 	flex-grow: 1;
@@ -197,8 +198,10 @@ nav {
 	font-size: 28px;
 	color: #7e0403;
 	padding: 10px;
-	margin: 5px;
+	margin: 30px auto;
 	background-color: transparent;
+	font-family: 'Gemunu Libre', sans-serif;
+	background: linear-gradient(to bottom, transparent, #fefeff);
 }
 
 .form__input:focus {
@@ -220,7 +223,6 @@ nav {
 	justify-content: space-evenly;
 	align-items: flex-end;
 	flex-grow: 1;
-	/* flex:2; */
 	border-top: 2px solid #442e1f;
 }
 
@@ -235,7 +237,7 @@ nav {
     border: solid 3px #f0f5f1;
     border-radius: 20px;
     color: #7e0403;
-    margin-top: 10px;
+    margin: 20px 5px;
 }
 
 /*Estilos del botón CANCELAR del FORMULARIO*/
@@ -244,12 +246,11 @@ nav {
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 40px;
     text-align: center;
-    margin: auto;
+    margin: 20px auto;
     width: 100%;
     border: solid 3px #fdfcfc;
     border-radius: 20px;
     color: #7e0403;
     background: linear-gradient(to bottom, transparent, #fefeff);
-    margin: 5px;
     text-decoration: none;
 }

@@ -43,6 +43,7 @@ header {
 }
 
 nav {
+	
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -86,6 +87,7 @@ nav {
 	border: none;
 	color: #a09d8c;
 	border-bottom: 1px solid #a09d8c; 
+	border-right:2px solid  #e3ded1;
 	text-decoration : none;
 	cursor: pointer;
 }
@@ -115,4 +117,5 @@ nav {
 }
 #menu ul li:hover>ul {
 	display: block;
+	z-index:1;
 }

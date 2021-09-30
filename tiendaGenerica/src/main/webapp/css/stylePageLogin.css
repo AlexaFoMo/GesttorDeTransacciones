@@ -64,6 +64,8 @@ body {
 /*Estilos de los "botones"*/
 form input {
 	outline: none;
+	    padding-top: 2rem;
+    text-align: center;
 }
 
 form button {
@@ -74,24 +76,27 @@ form button {
 
 /*Estilos del input USUARIO*/
 #usuario {
+	transition: all 3seg;
 	min-width: 80%;
-	
+	padding-top: 2rem;
+    text-align: center;
 	width:100%;
 	border:none;
 	border-bottom: solid 5px #b4796c;
 	border-radius: 20px;
 	background-color:transparent;
 	margin:2rem;
+	font-size: 3rem;
 }
 
 #usuario::placeholder {
-	font-size: 48px;
+	font-size: 3rem;
 	color: #341e20;
 }
 
 #usuario:hover {
 	outline:none;
-	font-size: 48px;
+	font-size: 3rem;
 	font-family: 'Carattere', cursive;
 	background: linear-gradient(to bottom, transparent, #fceeba);
 	border-bottom: 5px solid #fceeba;
@@ -99,7 +104,8 @@ form button {
 /*Estilos del input CONTRASEÑA*/
 #contrasena {
 	min-width: 80%;
-	
+	padding-top: 2rem;
+    text-align: center;
 	width:100%;
 	border:none;
 	border-bottom: solid 5px #b4796c;

@@ -6,11 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Form Insert Supplier</title>
+<title>Form Consultar Usuario</title>
 
 
 <!-- Llamado a la hoja de stilos - CSS -->
-<link href="css/styleFormInsertUser.css" type="text/css" rel="stylesheet" />
+<link href="css/styleFormCargarProducts.css" type="text/css" rel="stylesheet" />
 
 <!-- Fuentes -tipo de letra CARATTERE -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +21,9 @@
 <!-- Fuentes -tipo de letra gemunu libre -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap"
+	rel="stylesheet">
 <!-- Llamado a iconos -->
 <script src="https://kit.fontawesome.com/ea8e6c92c7.js"
 	crossorigin="anonymous">
@@ -31,22 +33,29 @@
 <!-- <!-- Llamado enlace Jquery -->
 <!-- <script type="text/javascript" src="JavaScript/jquery-3.6.0.min.js"></script>
 Llamado enlace hoja JavaScrpt
-<script type="text/javascript" src="JavaScript/consultar.js"></script> --> -->
+<script type="text/javascript" src="JavaScript/consultar.js"></script> -->
 
 </head>
 
 
 <body>
-
+<%-- <% String cedula="", nombre="", email="", usuario="", password="";if(request.getParameter("cedula")!=null){
+cedula=request.getParameter("cedula");
+nombre=request.getParameter("nombre");
+email=request.getParameter("email");
+usuario=request.getParameter("usuario");
+password=request.getParameter("password");
+}
+%> --%>
 	<div class="body__titlePage">
 		<p>Joyería Isis</p>
 	</div>
 
 	<div class="body__subtitlePage">
-		<p>Modulo Gestión Proovedores</p>
+		<p>Modulo Productos</p>
 	</div>
-
-<header>
+	
+	<header>
 		<nav id="menu">
       <ul class="#menugeneral">
         <li>
@@ -98,34 +107,32 @@ Llamado enlace hoja JavaScrpt
       </ul>
     </nav>
 	</header>
-
-	<!-- <img class="header__logoMarca" src="css/img/logo__.jpg" /> -->
+	
+	
 	<div class="contenedor__formularioCompleto">
 		<div class="tituloDelFormulario">
-			<i class="far fa-handshake"></i> 
-			<span>Datos del Proveedor</span>
+			<i class="far fa-gem"></i> <span>Cargar Productos</span>
 		</div>
+	<form action="../../form-result.php" method="post"
+		enctype="multipart/form-data" target="">
+
+		<p class="form__input cargar">
+
+			Nombre del archivo: <input class="" type="file"  name="archivosubido" ><i class="fas fa-upload"></i></p>
 		
-		
-		<form action="servletSupplier" method="POST">
-		<input class="form__input" type="text" name="nitSupplier" placeholder="NIT">
-		<input class="form__input" type="text" name="citySupplier" placeholder="Ciudad">
-		<input class="form__input" type="text" name="directionSupplier" placeholder="Direccion">
-		<input class="form__input" type="text" name="nameSupplier" placeholder="Nombre">
-		<input class="form__input" type="text" name="phoneNumberSupplier" placeholder="Telefono">
+		<div class="form__contenedorBotones">
+			<input class="form__Botones" type="submit" value="Cargar"> 
+			 
+				<input class="form__Botones"
+				type="submit" name="buttonDelete" value="Eliminar"> 
+				<a
+				class="form__BotonCancelar" href="menuPrincipal.jsp">Cancelar</a>
+		</div>
+
+
 		
 
-		<div class="form__contenedorBotones">
-			<input class="form__Botones" type="submit" name="buttonInsert" value="Registrar"> 
-			<a class="form__BotonCancelar" href="menuPrincipal.jsp">Cancelar</a>
-		</div>
-		</form>
-	</div>
-	
-<%
-ConexionBD co=new ConexionBD();
-co.conexionbd();
-%>
-	
+	</form>
+</div>
 </body>
 </html>

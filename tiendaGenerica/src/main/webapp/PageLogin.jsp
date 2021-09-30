@@ -1,4 +1,3 @@
-<%-- <%@page import="controlador.ConexionBD"%> --%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -28,14 +27,12 @@
 	crossorigin="anonymous"></script>
 </head>
 
-
-
 <!-- Inicio page Login -->
 <body>
 
 	<div class="Contenedor__tituloJoyeria">
-			<p class="tituloJoyeria">Joyeria Isis</p>
-		</div>
+		<p class="tituloJoyeria">Joyeria Isis</p>
+	</div>
 
 
 	<!-- Contenedor de todo el Login -->
@@ -68,12 +65,6 @@
 				href="salidas.html"><i class="fab fa-youtube"></i></a>
 		</div>
 	</footer>
-	<!-- Conexion a base de datos -->
-	<%-- <%
-	ConexionBD co = new ConexionBD();
-	co.conexionDataBase();
-	%> --%>
-
 	<!-- Cierre page Login -->
 </body>
 </html>

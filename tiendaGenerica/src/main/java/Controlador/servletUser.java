@@ -54,7 +54,7 @@ public class servletUser extends HttpServlet {
 		tableUsuarioDAO userdao;
 		tableUsuarioDto registro;
 		
-		
+		//INSERTAR
 		if(request.getParameter("buttonInsert")!= null) {
 			
 			cedula_usuario= Long.parseLong (request.getParameter("cedulaUser"));
@@ -76,8 +76,9 @@ public class servletUser extends HttpServlet {
 			}
 		}
 		
-//		//consultar tableUsuarios
-//		
+
+		
+		//CONSULTAR
 		if(request.getParameter("buttonConsult")!= null) {
 			
 			
@@ -106,27 +107,27 @@ public class servletUser extends HttpServlet {
 			}
 		}
 
-		//Actualizar tableUsuarios
+		//ACTUALIZAR
 	
 		if(request.getParameter("buttonUpdate")!= null) {
 			
-		int dat;	
-		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser"));
-		nameUser= request.getParameter("nameUser");
+		int dat=0;	
 		email_usuario= request.getParameter("email_usuario");
+		nameUser= request.getParameter("nameUser");
 		password= request.getParameter("passwordUser");
 		usuario= request.getParameter("user");
-		userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, password, usuario);
+		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser"));
+		userdto=new tableUsuarioDto(cedula_usuario, email_usuario, nameUser, password, usuario);
 		userdao=new tableUsuarioDAO();
 		dat=userdao.actualizar(userdto);
 		if(dat>0) {
 			JOptionPane.showMessageDialog(null, "Usuario actualizado");
-			response.sendRedirect("usuario.jsp");
+			response.sendRedirect("formConsultarUsuario.jsp");
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Usuario no actualizado");
+			JOptionPane.showMessageDialog(null, "No actualizado");
 		}
-		response.sendRedirect("formUsuario.jsp");
+		response.sendRedirect("formConsultarUsuario.jsp");
 }
 
 	
@@ -147,10 +148,10 @@ public class servletUser extends HttpServlet {
 		}
 		
 		else {
-			JOptionPane.showMessageDialog(null, "Usuario no eliminado");
+			JOptionPane.showMessageDialog(null, "No eliminado");
 			
 		}
-		response.sendRedirect("formUsuario.jsp");
+		response.sendRedirect("formConsultarUsuario.jsp");
 		
 	}
 }

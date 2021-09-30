@@ -1,95 +1,118 @@
 @charset "ISO-8859-1";
 /*Estilos para toda la página*/
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-img{
-  max-width: 100%;
+
+img {
+	max-width: 100%;
 }
 /*Estilos del body*/
 body {
-  background: fixed center/100% url(img/king-kong-HoBl6A2aZPA-unsplash.jpg);
-  object-fit: cover;
-  height: max-content;
+	background: fixed center/100%
+		url(img/king-kong-HoBl6A2aZPA-unsplash.jpg);
+	object-fit: cover;
+	height: max-content;
 }
 /*Estilos del título joyería*/
 .body__titlePage {
 	box-shadow: 0 0.4rem 0.8rem #e3ded1;
 	margin: 10px auto;
-    background-color: #341e206e;
-    border: 2px inset #e3ded1;
-    border-radius: 20px;
-    font-size: 120px;
-    color: #341e20;
-    font-family: "Carattere", cursive;
-    text-align: center;
-    width: 50%;
-    height: 40%;
-    text-shadow: 3px 3px 5px #e3ded1;
-}
-header {
-position: relative;
-    background-color: #341e20;
-    width: 100%;
-    border-right: none;
-    border-left: none;
-    border-bottom: 3px solid #e3ded1;
-    color: #a09d8c;
+	background-color: #341e206e;
+	border: 2px inset #e3ded1;
+	border-radius: 20px;
+	font-size: 120px;
+	color: #341e20;
+	font-family: "Carattere", cursive;
+	text-align: center;
+	width: 50%;
+	height: 40%;
+	text-shadow: 3px 3px 5px #e3ded1;
 }
 
-/* .header__logoMarca {
-    position: absolute;
-  height: 90%;
-  object-fit: scale-down;
-  border-radius: 50%;
-  margin: 7px 20px;
-} */
-.headerMenuNOResponsive {
+header {
+	position: relative;
+	background-color: #341e20;
+	width: 100%;
+	border-right: none;
+	border-left: none;
+	border-bottom: 3px solid #e3ded1;
+	color: #a09d8c;
+}
+
+nav {
 	display: flex;
 	justify-content: space-evenly;
 }
+
 .header__menu {
-	transition:all 6s ease;
+	display: block;
+	padding: 10px;
+	background-color: #341e20;
 	font-size: 40px;
 	border: none;
-	font-family: 'Montserrat', sans-serif;
-	/* color: #0a8ab6; */
-	color:#a09d8c;
+	font-family: "Carattere", cursive;
+	color: #a09d8c;
 	text-decoration: none;
-	cursor:pointer;
+	cursor: pointer;
+	letter-spacing: 1px;
+	
 }
+
 .header__menu:hover {
-  color: #fff;
-background: linear-gradient(to bottom, transparent, #a09d8c);
+	color: #fff;
+	background: linear-gradient(to bottom, transparent, #a09d8c);
 }
-#header__forResponsive{
-	display:none;
-}
-#check__usuarios{
-	display:none;
-}
-.header__ul__mobile {
-  display: none;
-  list-style: none;
-}
-header label {
-  padding: 0px;
-  margin: 0px;
-}
-#header__forResponsive {
-  display: none;
-}
-.menuDesplegable__Usuario{
-	display:none;
-	list-style-type:none;
-	padding-left:0;
-}
-.a__menu__Usuario{
-	text-decoration: none;
-	font-size: 40px;
+.header__submenu{
+	display: block;
+	padding:5px;
+	font-family:'Gemunu Libre', sans-serif;
+	background-color: #341e20;
+	font-size: 30px;
 	border: none;
-	color: #0a8ab6;
+	color: #a09d8c;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.header__submenu:hover {
+	color: #fff;
+	background: linear-gradient(to bottom, transparent, #a09d8c);
+}
+
+#menu ul li {
+	border: none;
+	color: #a09d8c;
+	border-bottom: 1px solid #a09d8c; 
+	text-decoration : none;
+	cursor: pointer;
+}
+
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0;
+}
+#menu ul ul li {
+	float: none;
+	width: 150px;
+}
+#menu ul li:hover>ul {
+	display: block;
 }

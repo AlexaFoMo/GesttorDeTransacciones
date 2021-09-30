@@ -132,7 +132,7 @@ public class servletUser extends HttpServlet {
 	
 	//Eliminar usuario
 	
-	if(request.getParameter("buttonDlete")!=null) {
+	if(request.getParameter("buttonDelete")!=null) {
 		int dat;
 		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser"));
 		nameUser= request.getParameter("nameUser");

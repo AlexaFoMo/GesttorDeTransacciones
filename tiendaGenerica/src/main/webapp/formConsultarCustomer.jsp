@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Form User</title>
+<title>Form Consultar Customer</title>
 
 
 <!-- Llamado a la hoja de stilos - CSS -->
@@ -34,18 +34,18 @@
 <!-- <script type="text/javascript" src="JavaScript/jquery-3.6.0.min.js"></script>
 Llamado enlace hoja JavaScrpt
 <script type="text/javascript" src="JavaScript/consultar.js"></script> -->
--->
+
 
 </head>
 
 
 <body>
-<% String cedula="", nombre="", email="", usuario="", password="";if(request.getParameter("cedula")!=null){
+<% String cedula="", direccion="", email="", nombre="", telefono="";if(request.getParameter("cedula")!=null){
 cedula=request.getParameter("cedula");
-nombre=request.getParameter("nombre");
+direccion=request.getParameter("direccion");
 email=request.getParameter("email");
-usuario=request.getParameter("usuario");
-password=request.getParameter("password");
+nombre=request.getParameter("nombre");
+telefono=request.getParameter("telefono");
 }
 %>
 	<div class="body__titlePage">
@@ -53,7 +53,7 @@ password=request.getParameter("password");
 	</div>
 
 	<div class="body__subtitlePage">
-		<p>Modulo gestión de usuarios</p>
+		<p>Modulo Gestión Clientes</p>
 	</div>
 	
 	<header>
@@ -89,13 +89,13 @@ password=request.getParameter("password");
 	<!-- <img class="header__logoMarca" src="css/img/logo__.jpg" /> -->
 	<div class="contenedor__formularioCompleto">
 		<div class="tituloDelFormulario">
-			<i class="fas fa-address-card"></i> <span>Consultar Usuario</span>
+			<i class="fas fa-address-card"></i> <span>Consultar Cliente</span>
 		</div>
 
 
-		<form class="formularioUsuario" action="servletUser" method="POST">
+		<form class="formularioCliente" action="servletCustomer" method="POST">
 
-			<input class="form__input" type="text" name="cedulaUser"
+			<input class="form__input" type="text" name="cedulaCustomer"
 				placeholder="Cédula">
 
 			<div class="form__contenedorBotones">
@@ -107,17 +107,17 @@ password=request.getParameter("password");
 
 			<div class="tituloDelFormulario"> <span>Datos encontrados</span>
 			</div>
-			<input class="form__input" type="text" name="cedulaUser"
+			<input class="form__input" type="text" name="cedulaCustomer"
 				placeholder="Cédula" value="<%=cedula%>">
-			<input class="form__input" type="text" name="nameUser"
-				placeholder="Nombre" value="<%=nombre%>"> 
+			<input class="form__input" type="text" name="directionCustomer"
+				placeholder="Dirección" value="<%=direccion%>"> 
 				
 				<input class="form__input"
-				type="email" name="email_usuario" placeholder="E-mail" value="<%=email%>"> 
+				type="email" name="email_customer" placeholder="E-mail" value="<%=email%>"> 
 				<input
-				class="form__input" type="text" name="user" placeholder="Usuario"  value="<%=usuario%>">
-			<input class="form__input" type="password" name="passwordUser"
-				placeholder="Password" value="<%=password%>">
+				class="form__input" type="text" name="name" placeholder="Nombre"  value="<%=nombre%>">
+			<input class="form__input" type="text" name="telefono"
+				placeholder="Telefono" value="<%=telefono%>">
 				
 				<div class="form__contenedorBotones">
 				<input class="form__Botones" type="submit" name="buttonUpdate"

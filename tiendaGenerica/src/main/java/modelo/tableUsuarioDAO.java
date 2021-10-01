@@ -70,13 +70,13 @@ public class tableUsuarioDAO {
 
 		try {
 			ps = cnn.prepareStatement(
-			"UPDATE usuario SET email_usuario=?, nombre_usuario=?, password=?, usuario=? WHERE cedula_usuario=?");
-			
-			ps.setString(1, usuarios.getEmail_usuario());
-			ps.setString(2, usuarios.getNombre_usuario());
-			ps.setString(3, usuarios.getPassword());
-			ps.setString(4, usuarios.getUsuario());
+			"UPDATE usuario SET nombre_usuario=?, email_usuario=?,  usuario=?, password=? WHERE cedula_usuario=?");
+			ps.setString(1, usuarios.getNombre_usuario());
+			ps.setString(2, usuarios.getEmail_usuario());
+			ps.setString(3, usuarios.getUsuario());
+			ps.setString(4, usuarios.getPassword());
 			ps.setLong(5, usuarios.getCedula_usuario());
+			
 			x = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

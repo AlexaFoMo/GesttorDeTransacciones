@@ -64,7 +64,7 @@ public class servletUser extends HttpServlet {
 			usuario= request.getParameter("user");
 			
 			
-			userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, password, usuario);
+			userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, usuario, password);
 			userdao=new tableUsuarioDAO();
 			usuarioInsertado=userdao.insertarUsuario(userdto);
 			if(usuarioInsertado== true) {
@@ -89,7 +89,7 @@ public class servletUser extends HttpServlet {
 			usuario= request.getParameter("user");
 			
 			
-			userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, password, usuario);
+			userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, usuario, password);
 			userdao=new tableUsuarioDAO();
 			registro = userdao.consultar(userdto);
 			
@@ -97,8 +97,8 @@ public class servletUser extends HttpServlet {
 				cedula_usuario = (registro.getCedula_usuario());
 				nameUser = (registro.getNombre_usuario());
 				email_usuario = (registro.getEmail_usuario());
-				password = (registro.getPassword());
 				usuario = (registro.getUsuario());
+				password = (registro.getPassword());
 				
 				response.sendRedirect("formConsultarUsuario.jsp?cedula="+cedula_usuario+"&&nombre="+nameUser+"&&email="+email_usuario+"&&usuario="+usuario+"&&password="+password);
 			}
@@ -116,13 +116,12 @@ public class servletUser extends HttpServlet {
 		nameUser= request.getParameter("nameUser");
 		password= request.getParameter("passwordUser");
 		usuario= request.getParameter("user");
-		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser"));
-		userdto=new tableUsuarioDto(cedula_usuario, email_usuario, nameUser, password, usuario);
+		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser2"));
+		userdto=new tableUsuarioDto(cedula_usuario,  nameUser, email_usuario, usuario, password);
 		userdao=new tableUsuarioDAO();
 		dat=userdao.actualizar(userdto);
 		if(dat>0) {
 			JOptionPane.showMessageDialog(null, "Usuario actualizado");
-			response.sendRedirect("formConsultarUsuario.jsp");
 		}
 		else {
 			JOptionPane.showMessageDialog(null, "No actualizado");
@@ -131,16 +130,16 @@ public class servletUser extends HttpServlet {
 }
 
 	
-	//Eliminar usuario
+	//ELIMINAR
 	
 	if(request.getParameter("buttonDelete")!=null) {
 		int dat;
-		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser"));
+		cedula_usuario=Long.parseLong(request.getParameter("cedulaUser2"));
 		nameUser= request.getParameter("nameUser");
 		email_usuario= request.getParameter("email_usuario");
 		password= request.getParameter("passwordUser");
 		usuario= request.getParameter("user");
-		userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, password, usuario);
+		userdto=new tableUsuarioDto(cedula_usuario, nameUser, email_usuario, usuario, password);
 		userdao=new tableUsuarioDAO();
 		dat=userdao.eliminar(userdto);
 		if(dat>0) {

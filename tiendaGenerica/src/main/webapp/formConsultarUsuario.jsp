@@ -129,8 +129,8 @@ password=request.getParameter("password");
 
 			<div class="tituloDelFormulario"> <span>Datos encontrados</span>
 			</div>
-			<input class="form__input" type="text" name="cedulaUser"
-				placeholder="Cédula" value="<%=cedula%>">
+			<input class="form__input" type="text" name="cedulaUser2"
+				placeholder="Cédula" value="<%=cedula%>" readonly>
 			<input class="form__input" type="text" name="nameUser"
 				placeholder="Nombre" value="<%=nombre%>"> 
 				

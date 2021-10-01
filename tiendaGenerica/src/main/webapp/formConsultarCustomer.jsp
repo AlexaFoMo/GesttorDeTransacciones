@@ -130,8 +130,8 @@ telefono=request.getParameter("telefono");
 
 			<div class="tituloDelFormulario"> <span>Datos encontrados</span>
 			</div>
-			<input class="form__input" type="text" name="cedulaCustomer"
-				placeholder="Cédula" value="<%=cedula%>">
+			<input class="form__input" type="text" name="cedulaCustomer2"
+				placeholder="Cédula" value="<%=cedula%>" readonly>
 			<input class="form__input" type="text" name="directionCustomer"
 				placeholder="Dirección" value="<%=direccion%>"> 
 				<input class="form__input"

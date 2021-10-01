@@ -16,8 +16,9 @@ public class tableUsuarioDto {
 		this.cedula_usuario = cedula_usuario;
 		this.email_usuario = email_usuario;
 		this.nombre_usuario = nombre_usuario;
-		this.password = password;
 		this.usuario = usuario;
+		this.password = password;
+		
 	}
 
 	public long getCedula_usuario() {

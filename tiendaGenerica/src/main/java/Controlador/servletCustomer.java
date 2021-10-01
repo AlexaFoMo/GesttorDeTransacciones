@@ -49,8 +49,8 @@ public class servletCustomer extends HttpServlet {
 		String email_cliente;
 		String nombre_cliente;
 		String telefono_cliente;
-		tableCustomerDto Customerdto;
-		tableCustomerDAO Customerdao;
+		tableCustomerDto customerdto;
+		tableCustomerDAO customerdao;
 		tableCustomerDto registro=null;
 		
 		
@@ -63,9 +63,9 @@ public class servletCustomer extends HttpServlet {
 			nombre_cliente= request.getParameter("nameCustomer");
 			telefono_cliente=request.getParameter("phoneNumberCustomer");
 			
-			Customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
-			Customerdao=new tableCustomerDAO();
-			x=Customerdao.insertCustomer(Customerdto);
+			customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
+			customerdao=new tableCustomerDAO();
+			x=customerdao.insertCustomer(customerdto);
 			if(x== true) {
 				JOptionPane.showMessageDialog(null, "Cliente creado exitosamente");
 				response.sendRedirect("menuPrincipal.jsp");
@@ -86,9 +86,9 @@ public class servletCustomer extends HttpServlet {
 				telefono_cliente= request.getParameter("phoneNumberCustomer");
 				
 				
-				Customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
-				Customerdao=new tableCustomerDAO();
-				registro = Customerdao.consultar(Customerdto);
+				customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
+				customerdao=new tableCustomerDAO();
+				registro = customerdao.consultar(customerdto);
 				
 				if(registro!= null) {
 					cedula_cliente = (registro.getCedula_Customer() );
@@ -103,6 +103,58 @@ public class servletCustomer extends HttpServlet {
 					JOptionPane.showMessageDialog(null, "No se encontró cliente");
 				}
 			}
+			
+			//ACTUALIZAR
+			
+			if(request.getParameter("buttonUpdate")!= null) {
+				
+			int actualizado=0;
+			
+			direccion_cliente= request.getParameter("directionCustomer");
+			email_cliente= request.getParameter("email_customer");
+			nombre_cliente= request.getParameter("nameCustomer");
+			telefono_cliente= request.getParameter("phoneNumberCustomer");
+			cedula_cliente= Long.parseLong (request.getParameter("cedulaCustomer2"));
+			
+			customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
+			customerdao=new tableCustomerDAO();
+			actualizado=customerdao.actualizar(customerdto);
+			if(actualizado>0) {
+				JOptionPane.showMessageDialog(null, "Cliente actualizado");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "No actualizado");
+			}
+			response.sendRedirect("formConsultarCustomer.jsp");
+	}
+
+		
+		//ELIMINAR
+		
+		if(request.getParameter("buttonDelete")!=null) {
+			int eliminado;
+			
+			
+			cedula_cliente= Long.parseLong (request.getParameter("cedulaCustomer2"));
+			direccion_cliente= request.getParameter("directionCustomer");
+			email_cliente= request.getParameter("email_customer");
+			nombre_cliente= request.getParameter("nameCustomer");
+			telefono_cliente= request.getParameter("phoneNumberCustomer");
+			
+			customerdto=new tableCustomerDto(cedula_cliente, direccion_cliente, email_cliente, nombre_cliente, telefono_cliente);
+			customerdao=new tableCustomerDAO();
+			eliminado=customerdao.eliminar(customerdto);
+			if(eliminado>0) {
+				JOptionPane.showMessageDialog(null, "Cliente eliminado");
+			}
+			
+			else {
+				JOptionPane.showMessageDialog(null, "No eliminado");
+				
+			}
+			response.sendRedirect("formConsultarCustomer.jsp");
+			
+		}
 	
 }
 }

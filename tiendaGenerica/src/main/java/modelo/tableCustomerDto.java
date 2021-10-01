@@ -10,6 +10,7 @@ public class tableCustomerDto {
 	
 	public tableCustomerDto(long cedula_Customer, String direccion_Customer, String email_Customer,
 			String nombre_Customer, String telefono_Customer) {
+		
 		this.cedula_Customer = cedula_Customer;
 		this.direccion_Customer = direccion_Customer;
 		this.email_Customer = email_Customer;
@@ -66,6 +67,9 @@ public class tableCustomerDto {
 	public void setTelefono_Customer(String telefono_Customer) {
 		this.telefono_Customer = telefono_Customer;
 	}
+	
+	
+	
 	
 	
 	
